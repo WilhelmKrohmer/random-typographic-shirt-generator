@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box; 
+}
+
+/**
+ * Random font styles defined here.
+ **/
 .fontstyle-1 {
     font-family: 'ZCOOL KuaiLe', cursive;
 }
@@ -9,10 +16,10 @@
     font-family: 'Gugi', cursive;
 }
 
-* {
-    box-sizing: border-box; 
-}
 
+/**
+ * Styling starts here.
+ **/
 html, body {
     height: 100%;
 }
@@ -21,14 +28,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: column;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+.base-text {
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+    color: #362C28;
+    text-align: center;
     margin: 0;
 }
 
-span {
-    font-family: 'Helvetica', 'Arial', sans-serif; 
-	color: #362C28;
+#title {
+    font-size: 25px;
+}
+
+#subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#shirt-text {
     font-size: 42px;
-    line-height: 1.25;
     font-weight: bold;
+}
+
+#generate-btn {
+    height: 60px;
+    width: 200px;
 }

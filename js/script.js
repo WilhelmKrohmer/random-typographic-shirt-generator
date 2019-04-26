@@ -28,16 +28,16 @@ generateButton.addEventListener('click', generateText);
  */
 function generateText() {
     // Generate random number for verbList and apply to verb
-    let randomVerbNumber = Math.floor((Math.random() * verbList.length) + 0);
+    let randomVerbNumber = Math.floor((Math.random() * verbList.length));
     verb.textContent = verbList[randomVerbNumber];
     // Generate random number for fontList and apply to verb
-    let randomFontNumberVerb = Math.floor((Math.random() * fontList.length) + 0);
+    let randomFontNumberVerb = Math.floor((Math.random() * fontList.length));
     verb.className = fontList[randomFontNumberVerb];
 
     // Generate random number for adjectiveList and apply to adjective
-    let randomAdjectiveNumber = Math.floor((Math.random() * adjectiveList.length) + 0);
+    let randomAdjectiveNumber = Math.floor((Math.random() * adjectiveList.length));
     adjective.textContent = adjectiveList[randomAdjectiveNumber];
     // Generate random number for fontList and apply to adjective
-    let randomFontNumberAdjective = Math.floor((Math.random() * fontList.length) + 0);
+    let randomFontNumberAdjective = Math.floor((Math.random() * fontList.length));
     adjective.className = fontList[randomFontNumberAdjective];
 }
