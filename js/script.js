@@ -9,8 +9,12 @@ const generateButton = document.getElementById('generate-btn');
 /**
  * This array contains all the verbs, that can be applied to the t-shirt.
  *  */ 
-let verbList = ["Be", "Go", "Do"];
-console.log(verbList);
+let verbList = ["Be", "Go", "Do", "Feel", "Have"];
+
+/**
+ * This array contains all the adjectives, that can be applied to the t-shirt.
+ *  */ 
+let adjectiveList = ["funny", "crazy", "it", "awesome", "great"];
 
 generateButton.addEventListener('click', generateText);
 
@@ -24,4 +28,7 @@ function generateText() {
 function setVerb() {
     let randomVerbNumber = Math.floor((Math.random() * verbList.length) + 0);
     verb.textContent = verbList[randomVerbNumber];
+
+    let randomAdjectiveNumber = Math.floor((Math.random() * adjectiveList.length) + 0);
+    adjective.textContent = adjectiveList[randomAdjectiveNumber];
 }
