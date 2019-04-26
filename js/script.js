@@ -7,14 +7,19 @@ let adjective = document.getElementById('adjective');
 const generateButton = document.getElementById('generate-btn');
 
 /**
- * This array contains all the verbs, that can be applied to the t-shirt.
+ * This array contains all the verbs.
  *  */ 
 let verbList = ["Be", "Go", "Do", "Feel", "Have"];
 
 /**
- * This array contains all the adjectives, that can be applied to the t-shirt.
+ * This array contains all the adjectives.
  *  */ 
 let adjectiveList = ["funny", "crazy", "it", "awesome", "great"];
+
+/**
+ * This array contains all fontstyles.
+ *  */
+let fontList = ["fontstyle-1", "fontstyle-2", "fontstyle-3"];
 
 generateButton.addEventListener('click', generateText);
 
@@ -22,13 +27,17 @@ generateButton.addEventListener('click', generateText);
  * This function is triggered when the generateButton is clicked.
  */
 function generateText() {
-    setVerb();
-}
-
-function setVerb() {
+    // Generate random number for verbList and apply to verb
     let randomVerbNumber = Math.floor((Math.random() * verbList.length) + 0);
     verb.textContent = verbList[randomVerbNumber];
+    // Generate random number for fontList and apply to verb
+    let randomFontNumberVerb = Math.floor((Math.random() * fontList.length) + 0);
+    verb.className = fontList[randomFontNumberVerb];
 
+    // Generate random number for adjectiveList and apply to adjective
     let randomAdjectiveNumber = Math.floor((Math.random() * adjectiveList.length) + 0);
     adjective.textContent = adjectiveList[randomAdjectiveNumber];
+    // Generate random number for fontList and apply to adjective
+    let randomFontNumberAdjective = Math.floor((Math.random() * fontList.length) + 0);
+    adjective.className = fontList[randomFontNumberAdjective];
 }

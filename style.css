@@ -1,0 +1,34 @@
+.fontstyle-1 {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.fontstyle-2 {
+    font-family: 'Anton', sans-serif;}
+
+.fontstyle-3 {
+    font-family: 'Gugi', cursive;
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0;
+}
+
+span {
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+	color: #362C28;
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: bold;
+}
