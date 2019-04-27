@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Roboto+Slab|Work+Sans');
+
 * {
     box-sizing: border-box; 
 }
@@ -31,17 +33,33 @@ body {
     flex-flow: column;
     margin: 0;
     padding: 20px;
+    background: #f5fc28;
+    background: -moz-linear-gradient(left, #f5fc28 0%, #f7e64b 100%);
+    background: -webkit-linear-gradient(left, #f5fc28 0%,#f7e64b 100%);
+    background: linear-gradient(to right, #f5fc28 0%,#f7e64b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fc28', endColorstr='#f7e64b',GradientType=1 );
 }
 
 main {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
     flex-grow: 2;
 }
 
+img {
+    background: #f2f2f2;
+    position: absolute;
+    width: 100%;
+    height: 100vw;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80);
+}
+
 .base-text {
-    font-family: 'Helvetica', 'Arial', sans-serif; 
+    font-family: 'Bitter', 'Helvetica', 'Arial', sans-serif; 
     color: #362C28;
     text-align: center;
     margin: 0;
@@ -58,11 +76,32 @@ main {
 }
 
 #shirt-text {
-    font-size: 42px;
+    font-size: 25px;
+    width: 50%;
+    margin-bottom: 30%;
     font-weight: bold;
+    z-index: 1;
 }
 
 #generate-btn {
     height: 60px;
-    width: 200px;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.20);
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+    border: none;
+    background: #333333;
+}
+
+#generate-btn:hover {
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.20);
+    transform: scale(1.01);
+    background: #111111;
+}
+
+#generate-btn:active {
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.20);
+    transform: scale(0.99);
 }
