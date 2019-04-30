@@ -15,7 +15,7 @@
 }
 
 /**
- * Page Layout.
+ * Mobile Layout.
  **/
 * {
     box-sizing: border-box; 
@@ -32,6 +32,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 20px;
+    background: radial-gradient(ellipse at 50% 50%, #B8FFC0 1%,#98F5A3 80%);
 }
 
 main {
@@ -47,6 +48,7 @@ footer, header {
     height: 30%;
     display: flex;
     flex-flow: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -60,10 +62,10 @@ footer, header {
 }
 
 .shirt_container__text {
-    font-size: 25px;
-    width: 100%;
+    margin-left: 50%;
+    left: -25%;
+    width: 50%;
     top: 30%;
-    text-align: center;
     z-index: 10;
     position: absolute;
 }
@@ -75,20 +77,21 @@ footer, header {
 img {
     width: 100%;
     display: block;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.20);
+    background-color: #f9da27;
 }
 
 /**
  * Typography
  **/
 .base-text {
-    font-family: 'Bitter', 'Helvetica', 'Arial', sans-serif; 
-    color: #362C28;
-    text-align: center;
-    margin: 0;
-}
-
-#title {
     font-size: 25px;
+    font-family: 'Bitter', 'Helvetica', 'Arial', sans-serif; 
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #2D4053;
 }
 
 #subtitle {
@@ -97,32 +100,51 @@ img {
     font-weight: 400;
 }
 
+.label {
+    font-size: 20px;
+}
+
 /**
  * Button
  **/
 #generate_btn {
-    height: 70px;
+    height: 60px;
     width: 100%;
-    border-radius: 35px;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.20);
-    border: none;
     font-size: 24px;
     font-weight: 700;
     color: #2D4053;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.20);
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
     background: #f9da27;
     background: -moz-linear-gradient(left, #f9da27 0%, #f7c94c 100%);
     background: -webkit-linear-gradient(left, #f9da27 0%,#f7c94c 100%);
     background: linear-gradient(to right, #f9da27 0%,#f7c94c 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9da27', endColorstr='#f7c94c',GradientType=1 );
-    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
 }
 
 #generate_btn:hover {
-    box-shadow: 0px 10px 22px rgba(0,0,0,0.20);
-    transform: scale(1.01);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.20);
+    transform: scale(1.005);
 }
 
 #generate_btn:active {
     box-shadow: 0px 10px 18px rgba(0,0,0,0.20);
     transform: scale(0.995);
 }
+
+/**
+ * Tablet & Desktop Layout.
+ **/
+ @media(min-width: 540px) {
+    .shirt_container__image {
+        width: 500px;
+    }
+    #generate_btn {
+        width: 300px;
+    }
+    .label {
+        font-size: 25px;
+    }
+ }
