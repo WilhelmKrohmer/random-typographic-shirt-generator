@@ -9,12 +9,12 @@ const generateButton = document.getElementById('generate_btn');
 /**
  * This array contains all the verbs.
  *  */ 
-let verbList = ["Be", "Go", "Do", "Feel", "Have", "Get", "Bring", "RUN"];
+let verbList = ["Be", "Go", "Do", "Feel", "Have", "Get", "Bring", "RUN", "Please like"];
 
 /**
  * This array contains all the adjectives.
  *  */ 
-let adjectiveList = ["funny", "crazy", "it", "awesome", "fun", "away", "the noize", "lucky"];
+let adjectiveList = ["funny!", "crazy!", "it!", "awesome!", "fun!", "away!", "the noize!", "lucky!", "my work!", "free!"];
 
 /**
  * This array contains all fontstyles.
