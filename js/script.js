@@ -4,7 +4,7 @@
  *  */
 let verb = document.getElementById('verb');
 let adjective = document.getElementById('adjective');
-const generateButton = document.getElementById('generate-btn');
+const generateButton = document.getElementById('generate_btn');
 
 /**
  * This array contains all the verbs.

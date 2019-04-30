@@ -10,13 +10,24 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <h1 id="title" class="base-text">Typographic T-Shirt Generator</h1>
-        <h2 id="subtitle" class="base-text">Inspired by lame t-shirt prints</h2>
+        <header>
+            <h1 id="title" class="base-text">Typographic T-Shirt Generator</h1>
+            <div id="subtitle" class="base-text">Inspired by lame t-shirt prints</div>
+        </header>
         <main>
-            <img>
-            <h3 id="shirt-text" class="base-text"><span id="verb">Be</span> <span id="adjective">creative!</span></h3>
+            <div class="shirt_container">
+                <div class="shirt_container__image">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                </div>
+                <div class="shirt_container__text base-text">
+                    <span id="verb">Be</span> 
+                    <span id="adjective">creative!</span>
+                </div>
+            </div>
         </main>
-        <button id="generate-btn">Generate</button>
+        <footer>
+            <button id="generate_btn" class="base-text">Generate Design</button>
+        </footer>
 
         <script src="js/script.js"></script>
     </body>

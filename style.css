@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bitter|Roboto+Slab|Work+Sans');
-
-* {
-    box-sizing: border-box; 
-}
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700');
 
 /**
  * Random font styles defined here.
@@ -18,46 +14,72 @@
     font-family: 'Gugi', cursive;
 }
 
-
 /**
- * Styling starts here.
+ * Page Layout.
  **/
+* {
+    box-sizing: border-box; 
+}
+
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-flow: column;
+    align-items: center;
     margin: 0;
     padding: 20px;
-    background: #f5fc28;
-    background: -moz-linear-gradient(left, #f5fc28 0%, #f7e64b 100%);
-    background: -webkit-linear-gradient(left, #f5fc28 0%,#f7e64b 100%);
-    background: linear-gradient(to right, #f5fc28 0%,#f7e64b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5fc28', endColorstr='#f7e64b',GradientType=1 );
 }
 
 main {
+    height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-    flex-grow: 2;
+    align-items: center;
+}
+
+footer, header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+/**
+ * Generated T-Shirt Container.
+ **/
+.shirt_container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.shirt_container__text {
+    font-size: 25px;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+}
+
+.shirt_container__image {
+    width: 100%;
 }
 
 img {
-    background: #f2f2f2;
-    position: absolute;
     width: 100%;
-    height: 100vw;
-    background-size: cover;
-    background-image: url(https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80);
+    display: block;
 }
 
+/**
+ * Typography
+ **/
 .base-text {
     font-family: 'Bitter', 'Helvetica', 'Arial', sans-serif; 
     color: #362C28;
@@ -72,36 +94,35 @@ img {
 #subtitle {
     margin-top: 10px;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
-#shirt-text {
-    font-size: 25px;
-    width: 50%;
-    margin-bottom: 30%;
-    font-weight: bold;
-    z-index: 1;
-}
-
-#generate-btn {
-    height: 60px;
+/**
+ * Button
+ **/
+#generate_btn {
+    height: 70px;
     width: 100%;
-    font-size: 24px;
-    color: white;
-    border-radius: 30px;
+    border-radius: 35px;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.20);
-    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
     border: none;
-    background: #333333;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2D4053;
+    background: #f9da27;
+    background: -moz-linear-gradient(left, #f9da27 0%, #f7c94c 100%);
+    background: -webkit-linear-gradient(left, #f9da27 0%,#f7c94c 100%);
+    background: linear-gradient(to right, #f9da27 0%,#f7c94c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9da27', endColorstr='#f7c94c',GradientType=1 );
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
 }
 
-#generate-btn:hover {
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.20);
+#generate_btn:hover {
+    box-shadow: 0px 10px 22px rgba(0,0,0,0.20);
     transform: scale(1.01);
-    background: #111111;
 }
 
-#generate-btn:active {
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.20);
-    transform: scale(0.99);
+#generate_btn:active {
+    box-shadow: 0px 10px 18px rgba(0,0,0,0.20);
+    transform: scale(0.995);
 }
